@@ -1,9 +1,13 @@
 ---
-- hosts: all
-
-  become: true
+- name: Update APT and install updates on local machines
+  hosts: all
+  become: yes
   tasks:
-    - name: update apt packages
+    - name: Update APT package cache
       apt:
-        upgrade: yes
+        update_cache: yes
+
+    - name: Upgrade all packages
+      apt:
+        upgrade: dist
         update_cache: yes
