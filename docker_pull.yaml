@@ -1,6 +1,6 @@
 ---
 - name: Pull Docker images using Docker Compose
-  hosts: your_host_group
+  hosts: all
   become: yes
 
   tasks:
