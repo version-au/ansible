@@ -4,7 +4,12 @@
   become: yes
 
   tasks:
-    - name: Pull Docker images using Docker Compose
+    - name: Pull Docker images from appstack
       command: docker compose pull
       args:
         chdir: /home/appsvm/appdata/appstack
+
+    - name: Pull Docker images from arrstack
+      command: docker compose pull
+      args:
+        chdir: /home/appsvm/appdata/arrstack
