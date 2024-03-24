@@ -1,0 +1,10 @@
+---
+- name: Pull Docker images using Docker Compose
+  hosts: your_host_group
+  become: yes
+
+  tasks:
+    - name: Pull Docker images using Docker Compose
+      command: docker compose pull
+      args:
+        chdir: /home/appsvm/appdata/appstack
